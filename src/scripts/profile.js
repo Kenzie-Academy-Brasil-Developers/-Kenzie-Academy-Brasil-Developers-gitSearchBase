@@ -26,8 +26,8 @@ const renderUserInfo = (objetc) => {
 
   const button = document.querySelector(".profile__change-user--button");
   button.addEventListener("click", () => {
-    window.location.replace("../../index.html");
     localStorage.removeItem("githubUserInfo");
+    window.location.replace("../../index.html");
   });
 
   return profile;
