@@ -26,7 +26,7 @@ const renderUserInfo = (objetc) => {
 
   const button = document.querySelector(".profile__change-user--button");
   button.addEventListener("click", () => {
-    window.location.replace("/index.html");
+    window.location.replace("../../index.html");
     localStorage.removeItem("githubUserInfo");
   });
 
@@ -37,7 +37,7 @@ renderUserInfo(object);
 
 const renderUserRepos = async () => {
   const login = object.login;
-  const repos = await await fetch(
+  const repos = await fetch(
     `https://api.github.com/users/${login}/repos`);
   const repositorios = await repos.json();
 
